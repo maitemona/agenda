@@ -8,13 +8,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
+import com.ipartek.formacion.persistencia.Categoria;
 import com.ipartek.formacion.persistencia.Newsletter;
 
 import com.ipartek.formacion.service.interfaces.NewsletterService;
@@ -49,6 +48,21 @@ public class NewsletterRestController implements Serializable {
 		 }
 		return reponse;
 	}
-	
+	 @RequestMapping(value = "/{codigo}", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
+		public ResponseEntity<Newsletter> getById(@PathVariable("codigo") int id){
+			//recogemos un obejto alumno
+			Newsletter news = nS.getById(id);
+			//recogemos un objeto ResponseEntity
+			ResponseEntity<Newsletter> reponse = null;
+					
+			 if(news == null){//404
+				 reponse = new ResponseEntity<Newsletter>(HttpStatus.NOT_FOUND);
+			 }else{//200
+				 reponse = new ResponseEntity<Newsletter>(news , HttpStatus.OK);
+			 }
+			
+			return reponse;
+		}
+
 	
 }
