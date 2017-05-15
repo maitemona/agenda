@@ -1,0 +1,16 @@
+com.ipartek.formacion
+com.ipartek.formacion.api
+com.ipartek.formacion.api.restfulservers
+com.ipartek.formacion.api.restfulservers.contacto
+com.ipartek.formacion.api.restfulservers.contacto.configuration
+com.ipartek.formacion.categoria
+com.ipartek.formacion.contacto
+com.ipartek.formacion.controller
+com.ipartek.formacion.controller.formater
+com.ipartek.formacion.mailing
+com.ipartek.formacion.newsletter
+com.ipartek.formacion.persistencia
+com.ipartek.formacion.service
+com.ipartek.formacion.service.interfaces
+com.ipartek.formacion.ws
+com.ipartek.formacion.ws.contacto

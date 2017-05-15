@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9b46126d-e14e-4292-b03a-c78171e9a9a3" activeEnvironment="Default" name="correos" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a0217f9f-be32-421c-ae6c-e1bdb57c3fd1" wsaVersion="NONE" name="OficinasBuzonesSoap" type="wsdl" bindingName="{OficinasBuzones}OficinasBuzonesSoap" soapVersion="1_1" anonymous="optional" definition="http://www.correos.es/dinamic/Servicios-Web/OficinasBuzones/OficinasBuzones.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.correos.es/dinamic/Servicios-Web/OficinasBuzones/OficinasBuzones.asmx?WSDL"><con:part><con:url>http://www.correos.es/dinamic/Servicios-Web/OficinasBuzones/OficinasBuzones.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="OficinasBuzones" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="OficinasBuzones" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="OficinasBuzones">
+      <s:element name="ConsultaProvincias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaProvinciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaProvinciasResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TieneCallejero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="localidad" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="provincia" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TieneCallejeroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TieneCallejeroResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaServiciosDisponiblesVisibles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaServiciosDisponiblesVisiblesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaServiciosDisponiblesVisiblesResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InformacionInicial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InformacionInicialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InformacionInicialResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParesConCallejero">
+        <s:complexType/>
+      </s:element>
+      <s:element name="ParesConCallejeroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParesConCallejeroResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelimitaLocalidades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="maxresultados" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="provincia" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="poblacion" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="nomcalle" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoBusqueda" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="oficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxOficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxBuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="servicios" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="numerocalle" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelimitaLocalidadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelimitaLocalidadesResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoPostal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigopostal" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="servicios" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="diadelasemana" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscaoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscabuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumbuzones" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoPostalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BusquedaPorCodigoPostalResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoPostalSinFiltro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigopostal" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscaoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscabuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumbuzones" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoPostalSinFiltroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BusquedaPorCodigoPostalSinFiltroResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoMunicipio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codmunicipio" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="servicios" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscaoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscabuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumbuzones" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoMunicipioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BusquedaPorCodigoMunicipioResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoMunicipioExtendido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codmunicipio" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="servicios" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscaoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscabuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumbuzones" type="s:string"/>
+            <s:element minOccurs="1" maxOccurs="1" name="OficinasEntrega" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoMunicipioExtendidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BusquedaPorCodigoMunicipioExtendidoResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalleOficina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigooficina" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalleOficinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalleOficinaResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalleBuzon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigobuzon" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalleBuzonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalleBuzonResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarLasMasCercanas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="oficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="numbuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="servicios" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoprovincia" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigolocalidad" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigocalle" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="numerocalle" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarLasMasCercanasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarLasMasCercanasResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelimitaLocalidadesOficinasEntrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="maxresultados" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="provincia" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="poblacion" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="nomcalle" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="TipoBusqueda" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="oficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxOficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxBuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="servicios" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="numerocalle" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelimitaLocalidadesOficinasEntregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelimitaLocalidadesOficinasEntregaResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoPostalSinFiltroOficinasEntrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idioma" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="codigopostal" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscaoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumoficinas" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="buscabuzones" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" name="maxnumbuzones" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BusquedaPorCodigoPostalSinFiltroOficinasEntregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BusquedaPorCodigoPostalSinFiltroOficinasEntregaResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultaProvinciasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaProvincias"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultaProvinciasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaProvinciasResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TieneCallejeroSoapIn">
+    <wsdl:part name="parameters" element="tns:TieneCallejero"/>
+  </wsdl:message>
+  <wsdl:message name="TieneCallejeroSoapOut">
+    <wsdl:part name="parameters" element="tns:TieneCallejeroResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultaServiciosDisponiblesVisiblesSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaServiciosDisponiblesVisibles"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultaServiciosDisponiblesVisiblesSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaServiciosDisponiblesVisiblesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="InformacionInicialSoapIn">
+    <wsdl:part name="parameters" element="tns:InformacionInicial"/>
+  </wsdl:message>
+  <wsdl:message name="InformacionInicialSoapOut">
+    <wsdl:part name="parameters" element="tns:InformacionInicialResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ParesConCallejeroSoapIn">
+    <wsdl:part name="parameters" element="tns:ParesConCallejero"/>
+  </wsdl:message>
+  <wsdl:message name="ParesConCallejeroSoapOut">
+    <wsdl:part name="parameters" element="tns:ParesConCallejeroResponse"/>
+  </wsdl:message>
+  <wsdl:message name="DelimitaLocalidadesSoapIn">
+    <wsdl:part name="parameters" element="tns:DelimitaLocalidades"/>
+  </wsdl:message>
+  <wsdl:message name="DelimitaLocalidadesSoapOut">
+    <wsdl:part name="parameters" element="tns:DelimitaLocalidadesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoPostalSoapIn">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoPostal"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoPostalSoapOut">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoPostalResponse"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoPostalSinFiltroSoapIn">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoPostalSinFiltro"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoPostalSinFiltroSoapOut">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoPostalSinFiltroResponse"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoMunicipioSoapIn">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoMunicipio"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoMunicipioSoapOut">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoMunicipioResponse"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoMunicipioExtendidoSoapIn">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoMunicipioExtendido"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoMunicipioExtendidoSoapOut">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoMunicipioExtendidoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="DetalleOficinaSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalleOficina"/>
+  </wsdl:message>
+  <wsdl:message name="DetalleOficinaSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalleOficinaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="DetalleBuzonSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalleBuzon"/>
+  </wsdl:message>
+  <wsdl:message name="DetalleBuzonSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalleBuzonResponse"/>
+  </wsdl:message>
+  <wsdl:message name="BuscarLasMasCercanasSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarLasMasCercanas"/>
+  </wsdl:message>
+  <wsdl:message name="BuscarLasMasCercanasSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarLasMasCercanasResponse"/>
+  </wsdl:message>
+  <wsdl:message name="DelimitaLocalidadesOficinasEntregaSoapIn">
+    <wsdl:part name="parameters" element="tns:DelimitaLocalidadesOficinasEntrega"/>
+  </wsdl:message>
+  <wsdl:message name="DelimitaLocalidadesOficinasEntregaSoapOut">
+    <wsdl:part name="parameters" element="tns:DelimitaLocalidadesOficinasEntregaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoPostalSinFiltroOficinasEntregaSoapIn">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoPostalSinFiltroOficinasEntrega"/>
+  </wsdl:message>
+  <wsdl:message name="BusquedaPorCodigoPostalSinFiltroOficinasEntregaSoapOut">
+    <wsdl:part name="parameters" element="tns:BusquedaPorCodigoPostalSinFiltroOficinasEntregaResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="OficinasBuzonesSoap">
+    <wsdl:operation name="ConsultaProvincias">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Devuelve las provincias por idioma</documentation>
+      <wsdl:input message="tns:ConsultaProvinciasSoapIn"/>
+      <wsdl:output message="tns:ConsultaProvinciasSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="TieneCallejero">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Verifica si existe alguna localidad con callejero con los valores ingresados</documentation>
+      <wsdl:input message="tns:TieneCallejeroSoapIn"/>
+      <wsdl:output message="tns:TieneCallejeroSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaServiciosDisponiblesVisibles">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Muestra la información de todos los servicios y características disponibles sobre los que se puede cribar</documentation>
+      <wsdl:input message="tns:ConsultaServiciosDisponiblesVisiblesSoapIn"/>
+      <wsdl:output message="tns:ConsultaServiciosDisponiblesVisiblesSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="InformacionInicial">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtiene la información necesaria para la página inicial del localizador de oficinas y buzones</documentation>
+      <wsdl:input message="tns:InformacionInicialSoapIn"/>
+      <wsdl:output message="tns:InformacionInicialSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ParesConCallejero">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Devuelve el listado de los pares provincia-localidad con callejero</documentation>
+      <wsdl:input message="tns:ParesConCallejeroSoapIn"/>
+      <wsdl:output message="tns:ParesConCallejeroSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="DelimitaLocalidades">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Delimita las localidades existentes en funcion de localidad/provincia elegidos</documentation>
+      <wsdl:input message="tns:DelimitaLocalidadesSoapIn"/>
+      <wsdl:output message="tns:DelimitaLocalidadesSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoPostal">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Las oficinas y/o buzones que se encuentren en 1 código postal</documentation>
+      <wsdl:input message="tns:BusquedaPorCodigoPostalSoapIn"/>
+      <wsdl:output message="tns:BusquedaPorCodigoPostalSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoPostalSinFiltro">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Las oficinas y/o buzones que se encuentren en 1 código postal</documentation>
+      <wsdl:input message="tns:BusquedaPorCodigoPostalSinFiltroSoapIn"/>
+      <wsdl:output message="tns:BusquedaPorCodigoPostalSinFiltroSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoMunicipio">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Las oficinas y/o buzones que se encuentren en 1 municipio</documentation>
+      <wsdl:input message="tns:BusquedaPorCodigoMunicipioSoapIn"/>
+      <wsdl:output message="tns:BusquedaPorCodigoMunicipioSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoMunicipioExtendido">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Las oficinas y/o buzones que se encuentren en 1 municipio</documentation>
+      <wsdl:input message="tns:BusquedaPorCodigoMunicipioExtendidoSoapIn"/>
+      <wsdl:output message="tns:BusquedaPorCodigoMunicipioExtendidoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOficina">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Devuelve la información disponible de las oficina que se consulta</documentation>
+      <wsdl:input message="tns:DetalleOficinaSoapIn"/>
+      <wsdl:output message="tns:DetalleOficinaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleBuzon">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Devuelve la información disponible del buzón que se consulta</documentation>
+      <wsdl:input message="tns:DetalleBuzonSoapIn"/>
+      <wsdl:output message="tns:DetalleBuzonSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarLasMasCercanas">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Devuelve la información de las oficinas más cercanas</documentation>
+      <wsdl:input message="tns:BuscarLasMasCercanasSoapIn"/>
+      <wsdl:output message="tns:BuscarLasMasCercanasSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="DelimitaLocalidadesOficinasEntrega">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Delimita las localidades existentes en funcion de localidad/provincia elegidos</documentation>
+      <wsdl:input message="tns:DelimitaLocalidadesOficinasEntregaSoapIn"/>
+      <wsdl:output message="tns:DelimitaLocalidadesOficinasEntregaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoPostalSinFiltroOficinasEntrega">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Las oficinas y/o buzones que se encuentren en 1 código postal</documentation>
+      <wsdl:input message="tns:BusquedaPorCodigoPostalSinFiltroOficinasEntregaSoapIn"/>
+      <wsdl:output message="tns:BusquedaPorCodigoPostalSinFiltroOficinasEntregaSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OficinasBuzonesSoap" type="tns:OficinasBuzonesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ConsultaProvincias">
+      <soap:operation soapAction="OficinasBuzones/ConsultaProvincias" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TieneCallejero">
+      <soap:operation soapAction="OficinasBuzones/TieneCallejero" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaServiciosDisponiblesVisibles">
+      <soap:operation soapAction="OficinasBuzones/ConsultaServiciosDisponiblesVisibles" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InformacionInicial">
+      <soap:operation soapAction="OficinasBuzones/InformacionInicial" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParesConCallejero">
+      <soap:operation soapAction="OficinasBuzones/ParesConCallejero" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelimitaLocalidades">
+      <soap:operation soapAction="OficinasBuzones/DelimitaLocalidades" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoPostal">
+      <soap:operation soapAction="OficinasBuzones/BusquedaPorCodigoPostal" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoPostalSinFiltro">
+      <soap:operation soapAction="OficinasBuzones/BusquedaPorCodigoPostalSinFiltro" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoMunicipio">
+      <soap:operation soapAction="OficinasBuzones/BusquedaPorCodigoMunicipio" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoMunicipioExtendido">
+      <soap:operation soapAction="OficinasBuzones/BusquedaPorCodigoMunicipioExtendido" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleOficina">
+      <soap:operation soapAction="OficinasBuzones/DetalleOficina" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleBuzon">
+      <soap:operation soapAction="OficinasBuzones/DetalleBuzon" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarLasMasCercanas">
+      <soap:operation soapAction="OficinasBuzones/BuscarLasMasCercanas" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelimitaLocalidadesOficinasEntrega">
+      <soap:operation soapAction="OficinasBuzones/DelimitaLocalidadesOficinasEntrega" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaPorCodigoPostalSinFiltroOficinasEntrega">
+      <soap:operation soapAction="OficinasBuzones/BusquedaPorCodigoPostalSinFiltroOficinasEntrega" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OficinasBuzones">
+    <wsdl:port name="OficinasBuzonesSoap" binding="tns:OficinasBuzonesSoap">
+      <soap:address location="http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint></con:endpoints><con:operation id="6e1e48dc-b36c-400a-8512-74a84f5a5649" isOneWay="false" action="OficinasBuzones/BuscarLasMasCercanas" name="BuscarLasMasCercanas" bindingOperationName="BuscarLasMasCercanas" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="964d9f2f-511f-47b7-ad67-bf2582272f66" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:BuscarLasMasCercanas>\r
+         <!--Optional:-->\r
+         <ofic:numoficinas>?</ofic:numoficinas>\r
+         <!--Optional:-->\r
+         <ofic:oficinas>?</ofic:oficinas>\r
+         <!--Optional:-->\r
+         <ofic:numbuzones>?</ofic:numbuzones>\r
+         <!--Optional:-->\r
+         <ofic:buzones>?</ofic:buzones>\r
+         <!--Optional:-->\r
+         <ofic:servicios>?</ofic:servicios>\r
+         <!--Optional:-->\r
+         <ofic:fecha>?</ofic:fecha>\r
+         <!--Optional:-->\r
+         <ofic:hora>?</ofic:hora>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codigoprovincia>?</ofic:codigoprovincia>\r
+         <!--Optional:-->\r
+         <ofic:codigolocalidad>?</ofic:codigolocalidad>\r
+         <!--Optional:-->\r
+         <ofic:codigocalle>?</ofic:codigocalle>\r
+         <!--Optional:-->\r
+         <ofic:numerocalle>?</ofic:numerocalle>\r
+      </ofic:BuscarLasMasCercanas>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/BuscarLasMasCercanas"/></con:call></con:operation><con:operation id="670e3219-5908-45ce-892d-b8a81f45200c" isOneWay="false" action="OficinasBuzones/BusquedaPorCodigoMunicipio" name="BusquedaPorCodigoMunicipio" bindingOperationName="BusquedaPorCodigoMunicipio" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="12f6311d-0c91-4c2a-97b8-cc0b83c562d9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:BusquedaPorCodigoMunicipio>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codmunicipio>?</ofic:codmunicipio>\r
+         <!--Optional:-->\r
+         <ofic:servicios>?</ofic:servicios>\r
+         <!--Optional:-->\r
+         <ofic:fecha>?</ofic:fecha>\r
+         <!--Optional:-->\r
+         <ofic:hora>?</ofic:hora>\r
+         <!--Optional:-->\r
+         <ofic:buscaoficinas>?</ofic:buscaoficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxnumoficinas>?</ofic:maxnumoficinas>\r
+         <!--Optional:-->\r
+         <ofic:buscabuzones>?</ofic:buscabuzones>\r
+         <!--Optional:-->\r
+         <ofic:maxnumbuzones>?</ofic:maxnumbuzones>\r
+      </ofic:BusquedaPorCodigoMunicipio>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/BusquedaPorCodigoMunicipio"/></con:call></con:operation><con:operation id="fec13753-0b1e-4b13-b9cc-31fbfd5c4abf" isOneWay="false" action="OficinasBuzones/BusquedaPorCodigoMunicipioExtendido" name="BusquedaPorCodigoMunicipioExtendido" bindingOperationName="BusquedaPorCodigoMunicipioExtendido" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5ae3299a-ce6a-41d1-8ac8-bb274c7f5fcd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:BusquedaPorCodigoMunicipioExtendido>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codmunicipio>?</ofic:codmunicipio>\r
+         <!--Optional:-->\r
+         <ofic:servicios>?</ofic:servicios>\r
+         <!--Optional:-->\r
+         <ofic:fecha>?</ofic:fecha>\r
+         <!--Optional:-->\r
+         <ofic:hora>?</ofic:hora>\r
+         <!--Optional:-->\r
+         <ofic:buscaoficinas>?</ofic:buscaoficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxnumoficinas>?</ofic:maxnumoficinas>\r
+         <!--Optional:-->\r
+         <ofic:buscabuzones>?</ofic:buscabuzones>\r
+         <!--Optional:-->\r
+         <ofic:maxnumbuzones>?</ofic:maxnumbuzones>\r
+         <ofic:OficinasEntrega>?</ofic:OficinasEntrega>\r
+      </ofic:BusquedaPorCodigoMunicipioExtendido>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/BusquedaPorCodigoMunicipioExtendido"/></con:call></con:operation><con:operation id="cb9b105a-b6f3-447f-a2a1-49734c59d77b" isOneWay="false" action="OficinasBuzones/BusquedaPorCodigoPostal" name="BusquedaPorCodigoPostal" bindingOperationName="BusquedaPorCodigoPostal" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2a8d8fb0-29d0-410e-be5d-73a4ba931634" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:BusquedaPorCodigoPostal>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codigopostal>?</ofic:codigopostal>\r
+         <!--Optional:-->\r
+         <ofic:servicios>?</ofic:servicios>\r
+         <!--Optional:-->\r
+         <ofic:fecha>?</ofic:fecha>\r
+         <!--Optional:-->\r
+         <ofic:diadelasemana>?</ofic:diadelasemana>\r
+         <!--Optional:-->\r
+         <ofic:hora>?</ofic:hora>\r
+         <!--Optional:-->\r
+         <ofic:buscaoficinas>?</ofic:buscaoficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxnumoficinas>?</ofic:maxnumoficinas>\r
+         <!--Optional:-->\r
+         <ofic:buscabuzones>?</ofic:buscabuzones>\r
+         <!--Optional:-->\r
+         <ofic:maxnumbuzones>?</ofic:maxnumbuzones>\r
+      </ofic:BusquedaPorCodigoPostal>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/BusquedaPorCodigoPostal"/></con:call></con:operation><con:operation id="4492e672-b6f1-441a-a68e-c6cfd6413eff" isOneWay="false" action="OficinasBuzones/BusquedaPorCodigoPostalSinFiltro" name="BusquedaPorCodigoPostalSinFiltro" bindingOperationName="BusquedaPorCodigoPostalSinFiltro" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d55d258e-4d29-4c5b-a858-6de6d59c2483" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:BusquedaPorCodigoPostalSinFiltro>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codigopostal>?</ofic:codigopostal>\r
+         <!--Optional:-->\r
+         <ofic:buscaoficinas>?</ofic:buscaoficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxnumoficinas>?</ofic:maxnumoficinas>\r
+         <!--Optional:-->\r
+         <ofic:buscabuzones>?</ofic:buscabuzones>\r
+         <!--Optional:-->\r
+         <ofic:maxnumbuzones>?</ofic:maxnumbuzones>\r
+      </ofic:BusquedaPorCodigoPostalSinFiltro>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/BusquedaPorCodigoPostalSinFiltro"/></con:call></con:operation><con:operation id="5e4cccb4-2616-4b39-82fb-f165449b6044" isOneWay="false" action="OficinasBuzones/BusquedaPorCodigoPostalSinFiltroOficinasEntrega" name="BusquedaPorCodigoPostalSinFiltroOficinasEntrega" bindingOperationName="BusquedaPorCodigoPostalSinFiltroOficinasEntrega" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d3650746-1ada-48a7-8f68-f3fcdb63bcf4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:BusquedaPorCodigoPostalSinFiltroOficinasEntrega>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codigopostal>?</ofic:codigopostal>\r
+         <!--Optional:-->\r
+         <ofic:buscaoficinas>?</ofic:buscaoficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxnumoficinas>?</ofic:maxnumoficinas>\r
+         <!--Optional:-->\r
+         <ofic:buscabuzones>?</ofic:buscabuzones>\r
+         <!--Optional:-->\r
+         <ofic:maxnumbuzones>?</ofic:maxnumbuzones>\r
+      </ofic:BusquedaPorCodigoPostalSinFiltroOficinasEntrega>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/BusquedaPorCodigoPostalSinFiltroOficinasEntrega"/></con:call></con:operation><con:operation id="1b16709f-3a2f-4f95-8786-d4c77a2c2712" isOneWay="false" action="OficinasBuzones/ConsultaProvincias" name="ConsultaProvincias" bindingOperationName="ConsultaProvincias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="021ae5a7-c256-465f-a64f-9138ee636cf4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:ConsultaProvincias>\r
+         <!--Optional:-->\r
+         <ofic:idioma>ES</ofic:idioma>\r
+      </ofic:ConsultaProvincias>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/ConsultaProvincias"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1f8ce20f-bbd0-40c9-b491-6fa216808b78" isOneWay="false" action="OficinasBuzones/ConsultaServiciosDisponiblesVisibles" name="ConsultaServiciosDisponiblesVisibles" bindingOperationName="ConsultaServiciosDisponiblesVisibles" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0b9ce5b0-0a6e-43ad-b175-c35aff6dd40c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:ConsultaServiciosDisponiblesVisibles>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+      </ofic:ConsultaServiciosDisponiblesVisibles>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/ConsultaServiciosDisponiblesVisibles"/></con:call></con:operation><con:operation id="cb1deba9-9831-451b-bd27-49b2b38f9e97" isOneWay="false" action="OficinasBuzones/DelimitaLocalidades" name="DelimitaLocalidades" bindingOperationName="DelimitaLocalidades" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="25b6be7c-7700-408c-ad98-271be80075c3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:DelimitaLocalidades>\r
+         <!--Optional:-->\r
+         <ofic:maxresultados>?</ofic:maxresultados>\r
+         <!--Optional:-->\r
+         <ofic:provincia>?</ofic:provincia>\r
+         <!--Optional:-->\r
+         <ofic:poblacion>?</ofic:poblacion>\r
+         <!--Optional:-->\r
+         <ofic:nomcalle>?</ofic:nomcalle>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:TipoBusqueda>?</ofic:TipoBusqueda>\r
+         <!--Optional:-->\r
+         <ofic:oficinas>?</ofic:oficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxOficinas>?</ofic:maxOficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxBuzones>?</ofic:maxBuzones>\r
+         <!--Optional:-->\r
+         <ofic:buzones>?</ofic:buzones>\r
+         <!--Optional:-->\r
+         <ofic:servicios>?</ofic:servicios>\r
+         <!--Optional:-->\r
+         <ofic:fecha>?</ofic:fecha>\r
+         <!--Optional:-->\r
+         <ofic:hora>?</ofic:hora>\r
+         <!--Optional:-->\r
+         <ofic:numerocalle>?</ofic:numerocalle>\r
+      </ofic:DelimitaLocalidades>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/DelimitaLocalidades"/></con:call></con:operation><con:operation id="930adba5-e276-43b3-a4cb-31a3f70d6e8a" isOneWay="false" action="OficinasBuzones/DelimitaLocalidadesOficinasEntrega" name="DelimitaLocalidadesOficinasEntrega" bindingOperationName="DelimitaLocalidadesOficinasEntrega" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="31958ec2-191c-46ca-b3e6-1858e3ee678d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:DelimitaLocalidadesOficinasEntrega>\r
+         <!--Optional:-->\r
+         <ofic:maxresultados>?</ofic:maxresultados>\r
+         <!--Optional:-->\r
+         <ofic:provincia>?</ofic:provincia>\r
+         <!--Optional:-->\r
+         <ofic:poblacion>?</ofic:poblacion>\r
+         <!--Optional:-->\r
+         <ofic:nomcalle>?</ofic:nomcalle>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:TipoBusqueda>?</ofic:TipoBusqueda>\r
+         <!--Optional:-->\r
+         <ofic:oficinas>?</ofic:oficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxOficinas>?</ofic:maxOficinas>\r
+         <!--Optional:-->\r
+         <ofic:maxBuzones>?</ofic:maxBuzones>\r
+         <!--Optional:-->\r
+         <ofic:buzones>?</ofic:buzones>\r
+         <!--Optional:-->\r
+         <ofic:servicios>?</ofic:servicios>\r
+         <!--Optional:-->\r
+         <ofic:fecha>?</ofic:fecha>\r
+         <!--Optional:-->\r
+         <ofic:hora>?</ofic:hora>\r
+         <!--Optional:-->\r
+         <ofic:numerocalle>?</ofic:numerocalle>\r
+      </ofic:DelimitaLocalidadesOficinasEntrega>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/DelimitaLocalidadesOficinasEntrega"/></con:call></con:operation><con:operation id="c9ece1d1-9c02-47e9-9a45-9c5361a85816" isOneWay="false" action="OficinasBuzones/DetalleBuzon" name="DetalleBuzon" bindingOperationName="DetalleBuzon" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cd26bb59-7173-4ffa-a59f-94b1e9a26388" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:DetalleBuzon>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codigobuzon>?</ofic:codigobuzon>\r
+      </ofic:DetalleBuzon>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/DetalleBuzon"/></con:call></con:operation><con:operation id="92485de8-f041-4657-ac8c-fd036e344928" isOneWay="false" action="OficinasBuzones/DetalleOficina" name="DetalleOficina" bindingOperationName="DetalleOficina" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eab370e5-8783-4073-9e3e-3c5699318450" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:DetalleOficina>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+         <!--Optional:-->\r
+         <ofic:codigooficina>?</ofic:codigooficina>\r
+      </ofic:DetalleOficina>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/DetalleOficina"/></con:call></con:operation><con:operation id="ac6674c2-caa9-4b24-a191-4cc0d6687f1e" isOneWay="false" action="OficinasBuzones/InformacionInicial" name="InformacionInicial" bindingOperationName="InformacionInicial" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="13dc6223-8319-4302-ae24-76486ca23f8c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:InformacionInicial>\r
+         <!--Optional:-->\r
+         <ofic:idioma>?</ofic:idioma>\r
+      </ofic:InformacionInicial>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/InformacionInicial"/></con:call></con:operation><con:operation id="164413d7-c6a0-4b55-85d6-4c9dbdff6a7d" isOneWay="false" action="OficinasBuzones/ParesConCallejero" name="ParesConCallejero" bindingOperationName="ParesConCallejero" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5c2936ca-df02-46c6-bc0b-7b8cf5ec90c8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:ParesConCallejero/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/ParesConCallejero"/></con:call></con:operation><con:operation id="1c312563-acc7-42c2-b246-6b88d45e3c76" isOneWay="false" action="OficinasBuzones/TieneCallejero" name="TieneCallejero" bindingOperationName="TieneCallejero" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a1558b35-3de5-412f-81b4-bb87266d4f05" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://aplicacionesweb.correos.es/dinamic/servicios-web/oficinasbuzones/oficinasbuzones.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ofic="OficinasBuzones">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ofic:TieneCallejero>\r
+         <!--Optional:-->\r
+         <ofic:localidad>?</ofic:localidad>\r
+         <!--Optional:-->\r
+         <ofic:provincia>?</ofic:provincia>\r
+      </ofic:TieneCallejero>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="OficinasBuzones/TieneCallejero"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

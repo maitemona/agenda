@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+.footer-bs {
+    background-color: #e7e7e7;
+	padding: 30px ;
+	margin-bottom: 20px;
+	color:#777; 
+	text-align: center;
+}
+.espacio{
+	padding: 20px;
+}
+
+body {
+    font-size: 16px;
+    background-color: #e7e7e7;
+    min-height: 400px;
+}
+span{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.centrado{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.activo {
+    text-decoration: underline;
+    background-color: red;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:jee="http://www.springframework.org/schema/jee"   
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/jee
+     http://www.springframework.org/schema/jee/spring-jee.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="databaseProperties"
+       class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+       <property name="location" value="classpath:/database.properties" />
+   </bean>
+	<bean name="mysqlDataSource"
+	    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	    <property name="driverClassName" value="${mysql.driver}" />
+	    <property name="url" value="${mysql.url}" />
+	    <property name="username" value="${mysql.user}" />
+	    <property name="password" value="${mysql.pass}" />
+	</bean>	
+	
+	<bean id="messageSource"
+      class="org.springframework.context.support.ResourceBundleMessageSource">
+       <property name="basenames">
+           <list>
+               <value>messages/validationMessages</value>
+               <value>messages/viewtext</value>
+           </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+	
+	<!-- 
+		Esto es para cargar constantes.properties para todo el proyecto
+	<bean id="misCostantes"
+      class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	  <property name="locations">
+	    <list>
+	      <value>classpath*:constantes/costantes.properties</value>
+	    </list>
+	  </property>
+	</bean>
+	 -->
+	
+	  <!-- Para meter un objeto del EJB , pq que coge la bean de ese jbe-->
+   <jee:jndi-lookup id="categoriaServiceRemote" jndi-name="java:app/agenda-ejb/categoriaServiceBean" />
+	<bean id="categoriaServiceImp" class="com.ipartek.formacion.service.CategoriaServiceImp">
+		<property name="categoriaServiceRemote" ref="categoriaServiceRemote" />
+	</bean>
+	
+	<jee:jndi-lookup id="contactoServiceRemote" jndi-name="java:app/agenda-ejb/contactoServiceBean" />
+	<bean id="contactoServiceImp" class="com.ipartek.formacion.service.ContactoServiceImp">
+		<property name="contactoServiceRemote" ref="contactoServiceRemote" />
+	</bean>
+
+	<jee:jndi-lookup id="newsletterServiceRemote" jndi-name="java:app/agenda-ejb/newsletterServiceBean" />
+	<bean id="newsletterServiceImp" class="com.ipartek.formacion.service.NewsletterServiceImp">
+		<property name="newsletterServiceRemote" ref="newsletterServiceRemote" />
+	</bean>
+	
+	<jee:jndi-lookup id="mailingServiceRemote" jndi-name="java:app/agenda-ejb/mailingServiceBean" />
+	<bean id="mailingServiceImp" class="com.ipartek.formacion.service.MailingServiceImp">
+		<property name="mailingServiceRemote" ref="mailingServiceRemote" />
+	</bean>
+ </beans>  
