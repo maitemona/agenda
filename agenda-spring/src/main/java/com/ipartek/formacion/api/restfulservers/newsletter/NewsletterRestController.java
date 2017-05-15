@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ipartek.formacion.persistencia.Categoria;
+
 import com.ipartek.formacion.persistencia.Newsletter;
 
 import com.ipartek.formacion.service.interfaces.NewsletterService;
 /*
- * http://gestionagenda/api/contacto/1
+ * http://gestionagenda/api/newsletter/1
  * metodo : get
  * respuesta codigo HTTP(el protocolo de estado de http siempre se devuelve)
  * 			contacto serializado en json, xml, html...
