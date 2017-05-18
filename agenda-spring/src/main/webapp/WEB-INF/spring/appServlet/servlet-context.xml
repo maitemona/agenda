@@ -56,6 +56,8 @@
 	<!-- para cargar achivo constante.properties para  -->
 	<context:property-placeholder location="classpath*:/constantes/constantes.properties"/>
 	<context:component-scan base-package="com.ipartek.formacion" />
+	<!-- HAy que quiatarlo para que pueda consumirlo desde cualquier URL -->
+	<!--
 	<cors>
 		<mapping path="/api/**"
 			allowed-origins="*"
@@ -74,6 +76,7 @@
 		<mapping path="/resources/**"
 				allowed-origins="http://formacion.ipartek.com" />
 	</cors>
+	-->
 		<!--Solo para capa vista(.jsp) y controladores (por tener package web)  -->
 	<!--  <beans:bean class="com.ipartek.formacion.controller.validator.AlumnoValidator" id="alumnoValidator">
 	</beans:bean>
