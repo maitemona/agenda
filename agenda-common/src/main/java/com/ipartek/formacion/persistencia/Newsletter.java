@@ -42,7 +42,8 @@ public class Newsletter implements Serializable{
 	private boolean activo;
 	private String archivo;
 	
-	@OneToMany(fetch = FetchType.LAZY,mappedBy="newsletter")
+/*	@OneToMany(fetch = FetchType.LAZY,mappedBy="newsletter")*/
+	@Transient
 	private Set<Mailing> mailings;
 	
 	public Newsletter(){

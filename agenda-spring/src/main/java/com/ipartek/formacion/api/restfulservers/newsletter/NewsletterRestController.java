@@ -3,6 +3,8 @@ package com.ipartek.formacion.api.restfulservers.newsletter;
 import java.io.Serializable;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -13,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.ipartek.formacion.controller.CategoriaController;
 import com.ipartek.formacion.persistencia.Newsletter;
 
 import com.ipartek.formacion.service.interfaces.NewsletterService;
@@ -32,6 +34,7 @@ import com.ipartek.formacion.service.interfaces.NewsletterService;
 @RequestMapping(value = "/api/newsletters" )
 public class NewsletterRestController implements Serializable {
 
+	private static final Logger logger = LoggerFactory.getLogger(NewsletterRestController.class);
 	private static final long serialVersionUID = -6698866485450376235L;
 	@Autowired
 	NewsletterService nS;
@@ -40,6 +43,8 @@ public class NewsletterRestController implements Serializable {
 	public ResponseEntity<List<Newsletter>> getAll(){
 		
 		List<Newsletter> newsletters = nS.getAll(); 
+	
+		logger.info("API lista size:"+newsletters.size());
 		ResponseEntity<List<Newsletter>> reponse = null;
 		if(newsletters == null || newsletters.isEmpty()){//204
 			 reponse = new ResponseEntity<List<Newsletter>>(HttpStatus.NO_CONTENT);
@@ -48,6 +53,8 @@ public class NewsletterRestController implements Serializable {
 		 }
 		return reponse;
 	}
+	
+	
 	 @RequestMapping(value = "/{codigo}", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE })
 		public ResponseEntity<Newsletter> getById(@PathVariable("codigo") int id){
 			//recogemos un obejto alumno
