@@ -63,15 +63,15 @@ public class CategoriaRestController implements Serializable {
 
 	
 		@RequestMapping(method = RequestMethod.POST, consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = { MediaType.APPLICATION_JSON_VALUE })
-		public ResponseEntity<Void> create(@Valid @RequestBody Categoria categoria, UriComponentsBuilder ucBuilder){
+		public ResponseEntity<Void> create( @RequestBody Categoria categoria, UriComponentsBuilder ucBuilder){
 			
 			
 			//validamos que ese alumno esixta o no con el metos getByDni
-			Categoria cate= cS.getById((categoria.getIdcategoria()));
+			/*Categoria cate= cS.getById((categoria.getIdcategoria()));*/
 			ResponseEntity<Void> response = null;
-			if(cate != null){//409
+			/*if(cate != null){//409
 				response = new ResponseEntity<Void>(HttpStatus.CONFLICT);
-			}else{//300
+			}else{//300*/
 				try{
 					//recogo el objeto por el codigo
 					Categoria aux = cS.create(categoria);
@@ -84,7 +84,7 @@ public class CategoriaRestController implements Serializable {
 				}catch(Exception e){
 					response = new ResponseEntity<Void>(HttpStatus.NOT_ACCEPTABLE);
 				}
-			}
+			//}
 			return response;
 		}
 		
