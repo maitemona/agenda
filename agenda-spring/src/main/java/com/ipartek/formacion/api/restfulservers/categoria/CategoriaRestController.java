@@ -62,13 +62,14 @@ public class CategoriaRestController implements Serializable {
 		}
 
 	
-		@RequestMapping(method = RequestMethod.POST, consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = { MediaType.APPLICATION_JSON_VALUE })
-		public ResponseEntity<Void> create( @RequestBody Categoria categoria, UriComponentsBuilder ucBuilder){
+		@RequestMapping(method = RequestMethod.POST, consumes = { MediaType.APPLICATION_JSON_VALUE }, produces = {
+				MediaType.APPLICATION_JSON_VALUE})
+		public ResponseEntity<Categoria> create( @RequestBody Categoria categoria, UriComponentsBuilder ucBuilder){
 			
 			
 			//validamos que ese alumno esixta o no con el metos getByDni
 			/*Categoria cate= cS.getById((categoria.getIdcategoria()));*/
-			ResponseEntity<Void> response = null;
+			ResponseEntity<Categoria> response = null;
 			/*if(cate != null){//409
 				response = new ResponseEntity<Void>(HttpStatus.CONFLICT);
 			}else{//300*/
@@ -77,12 +78,13 @@ public class CategoriaRestController implements Serializable {
 					Categoria aux = cS.create(categoria);
 					//paar devolver el obejto garbado en bbdd, hay que manipular los encabezados de HTTP
 					//vamos a llamar al metodo  ResponseEntity<Alumno> getById
-					//response = new ResponseEntity<Void>(HttpStatus.CREATED);
+					response = new ResponseEntity<Categoria>(HttpStatus.CREATED);
 					HttpHeaders headers = new HttpHeaders();
 					headers.setLocation(ucBuilder.path("/api/categoria/{codigo}").buildAndExpand(aux.getIdcategoria()).toUri());
-					response = new ResponseEntity<Void>(headers,HttpStatus.CREATED);
+					//response = new ResponseEntity<Categoria>(headers,HttpStatus.CREATED);
+					response = new ResponseEntity<Categoria>(aux,HttpStatus.CREATED);
 				}catch(Exception e){
-					response = new ResponseEntity<Void>(HttpStatus.NOT_ACCEPTABLE);
+					response = new ResponseEntity<Categoria>(HttpStatus.NOT_ACCEPTABLE);
 				}
 			//}
 			return response;

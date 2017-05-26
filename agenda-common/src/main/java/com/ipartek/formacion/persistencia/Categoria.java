@@ -23,7 +23,7 @@ import javax.persistence.Transient;
 @Entity(name ="categoria")
 @Table(name = "categoria")
 @NamedQueries({
-	@NamedQuery(name="categoria.getAll", query="SELECT cat FROM categoria cat where activo=1")
+	@NamedQuery(name="categoria.getAll", query="SELECT cat FROM categoria cat")
 })
 public class Categoria implements Serializable{
 	
